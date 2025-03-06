@@ -1,4 +1,8 @@
 package org.example.Entities;
 
-public class ProgressReportRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProgressReportRepository extends JpaRepository<ProgressReport, Long> {
 }
