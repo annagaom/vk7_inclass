@@ -41,10 +41,9 @@ public class ProgressReportDao {
                 throw new RuntimeException("Raporttia ei löydy!");
             }
 
-            if (!existingReport.getVersion()) {
+            if (existingReport.getVersion() != updatedReport.getVersion()) {
                 throw new OptimisticLockException("Tietoa on muokattu toisessa istunnossa. Päivitä ja yritä uudelleen.");
             }
-
             existingReport.setReportDate(updatedReport.getReportDate());
             existingReport.setAchievements(updatedReport.getAchievements());
             existingReport.setAreasOfImprovement(updatedReport.getAreasOfImprovement());

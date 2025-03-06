@@ -6,14 +6,12 @@ import java.util.Date;
 
 @Entity
 public class ProgressReport {
-    ProgressReportService progressReportService;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Version
-    private boolean version; // Optimistic locking field
+    private int version; // Optimistic locking field
 
     private Date reportDate;
     private String achievements;
@@ -42,7 +40,7 @@ public class ProgressReport {
         this.id = id;
     }
 
-    public boolean getVersion() {
+    public int getVersion() {
         return version;
     }
 
