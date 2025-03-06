@@ -1,6 +1,8 @@
 # Exercise Aikido Training Session Tracker
 
 ### Luo database
+Database name: vk7_inclass
+
 Tietokannan tiedot ovat saatavilla `Database/tietokanta.sql` tiedostossa:
 [Tietokanta SQL](Database/tietokanta.sql)
 
@@ -26,7 +28,7 @@ Students will develop a backend system for tracking Aikido training sessions, in
 - Find all students who joined within the last six months.
 - Search for training sessions held in a specific location.
 - Retrieve all instructors with more than five years of experience.
-### Add the following features
+### Added the following features
 1. Entity Events
    Implement @PrePersist and @PreUpdate to automatically set timestamps when entities are created or updated.
    Use @PostLoad to initialize computed fields.
