@@ -9,12 +9,12 @@ public class AttendanceStatusConverter implements AttributeConverter<AttendanceS
     @Override
     public Integer convertToDatabaseColumn(AttendanceStatus status) {
         if (status == null) return null;
-        return status.getCode(); // 存储数值
+        return status.getCode();
     }
 
     @Override
     public AttendanceStatus convertToEntityAttribute(Integer code) {
         if (code == null) return null;
-        return AttendanceStatus.fromCode(code); // 通过数值获取枚举
+        return AttendanceStatus.fromCode(code);
     }
 }

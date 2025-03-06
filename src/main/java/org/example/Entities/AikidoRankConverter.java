@@ -9,12 +9,12 @@ public class AikidoRankConverter implements AttributeConverter<AikidoRank, Integ
     @Override
     public Integer convertToDatabaseColumn(AikidoRank rank) {
         if (rank == null) return null;
-        return rank.getLevel(); // 存储数值等级
+        return rank.getLevel();
     }
 
     @Override
     public AikidoRank convertToEntityAttribute(Integer level) {
         if (level == null) return null;
-        return AikidoRank.fromLevel(level); // 通过数值获取枚举
+        return AikidoRank.fromLevel(level);
     }
 }

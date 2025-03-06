@@ -83,14 +83,6 @@ public class Student {
         this.rank = rank;
     }
 
-    public RankStatus getRankStatus() {
-        return rankStatus;
-    }
-
-    public void setRankStatus(RankStatus rankStatus) {
-        this.rankStatus = rankStatus;
-    }
-
     public LocalDate getJoinDate() {
         return joinDate;
     }
@@ -141,7 +133,8 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", rank='" + rank + '\'' +
-                ", joinDate=" + formattedJoinDate +
-                ", rankStatus=" + rankStatus + '}';
+                ", joinDate=" + joinDate +
+                ", formattedJoinDate='" + formattedJoinDate + '\'' +
+                '}';
     }
 }

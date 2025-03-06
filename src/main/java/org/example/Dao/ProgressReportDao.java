@@ -12,12 +12,6 @@ public class ProgressReportDao {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("vk7_inclass");
     private EntityManager em = emf.createEntityManager();
 
-    public void addProgressReport(ProgressReport progressReport) {
-        em.getTransaction().begin();
-        em.persist(progressReport);
-        em.getTransaction().commit();
-    }
-
     public ProgressReport getProgressReportById(long id) {
         em.getTransaction().begin();
         ProgressReport progressReport = em.find(ProgressReport.class, id);

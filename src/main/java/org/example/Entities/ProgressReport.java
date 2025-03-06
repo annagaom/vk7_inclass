@@ -13,7 +13,7 @@ public class ProgressReport {
     private long id;
 
     @Version
-    private int version; // Optimistic locking field
+    private boolean version; // Optimistic locking field
 
     private Date reportDate;
     private String achievements;
@@ -25,7 +25,6 @@ public class ProgressReport {
     private Student student;
 
     public ProgressReport() {
-        progressReportService = new ProgressReportService();
     }
 
     public ProgressReport(Date reportDate, String achievements, String areasOfImprovement, int student_id) {
@@ -33,7 +32,6 @@ public class ProgressReport {
         this.achievements = achievements;
         this.areasOfImprovement = areasOfImprovement;
         this.student_id = student_id;
-        progressReportService = new ProgressReportService();
     }
 
     public long getId() {
