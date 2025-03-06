@@ -2,3 +2,4 @@
 
 ## luo database
 Tietokannan tiedot ovat saatavilla `Database/tietokanta.sql` tiedostossa.
+[Tietokanta SQL](Database/tietokanta.sql)
